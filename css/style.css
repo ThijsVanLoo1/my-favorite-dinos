@@ -1,0 +1,175 @@
+/*//////////////////////
+/////   GENERAL   //////
+/////////////////////*/
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --color-red: #952e31;
+    --color-black: #2b2b2b;
+    --color-white: #f2f2f2;
+    --color-beige: #f7ede2;
+    --color-blue: #284b63;
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins", serif;
+    background-color: var(--color-white);
+}
+
+.primary-button {
+    text-decoration: none;
+    color: var(--color-white);
+    background-color: var(--color-red);
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+.primary-button:hover {
+    background-color: var(--color-beige);
+    transition: 0.25s;
+}
+
+.primary-button:focus {
+    outline: none;
+}
+
+/*//////////////////////
+/////   HEADER    //////
+/////////////////////*/
+
+.hero {
+    height: 90vh;
+    background-image: url('https://image.kidsweek.nl/252479694/width/2048/wist-je-dit-al-over-dinosaurussen-');
+    background-size: cover;
+    background-position: top;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.hero-items {
+    margin-left: 100px;
+}
+
+.hero-text {
+    color: #a0a0a0;
+    font-size: 75px;
+    text-align: center;
+}
+
+/*//////////////////////
+/////   MAIN     //////
+/////////////////////*/
+
+.dino-section {
+    padding: 60px;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.card {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card-text {
+    padding: 20px;
+    width: 40%;
+}
+
+.card img {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card h1 {
+    color: #999;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 13px;
+}
+
+/*//////////////////////
+/////   FOOTER    //////
+/////////////////////*/
+
+footer {
+    padding: 20px;
+    background-color: var(--color-red);
+    color: #e69999;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer p {
+    margin: 0;
+}
+
+/*//////////////////////
+/////   MOBILE    //////
+/////////////////////*/
+
+@media (max-width: 1024px) {
+    .card {
+        flex-direction: column;
+    }
+
+    .card-text,
+    .card img {
+        width: 100%;
+    }
+
+    .hero-items {
+        margin-left: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-text {
+        font-size: 50px;
+    }
+
+    .hero-items {
+        margin-left: 20px;
+    }
+
+    .card p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-text {
+        font-size: 35px;
+    }
+
+    .primary-button {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .card-container {
+        gap: 20px;
+    }
+}
